@@ -1,0 +1,66 @@
+<header>
+  <div class="content">
+    <a href="/"><h1>Unibox Personal Site</h1></a>
+
+    <nav>
+      <a
+        href="/about"
+        aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
+        >About</a
+      >
+      <a
+        href="/blog"
+        aria-current={Astro.url.pathname === '/blog' ? 'page' : undefined}
+        >Blog</a
+      >
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  }
+  .content {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    color: white;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 15px;
+    a {
+      &[aria-current='page'] {
+        text-decoration: underline;
+        font-weight: bold;
+        transform: scale(1.1) translateY(-2px);
+      }
+    }
+  }
+
+  @media screen and (min-width: 40rem) {
+    header {
+      .content {
+        padding: 0 50px;
+        max-width: 1280px;
+        height: 150px;
+        margin: 0 auto;
+      }
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    nav {
+      gap: 20px;
+    }
+  }
+</style>

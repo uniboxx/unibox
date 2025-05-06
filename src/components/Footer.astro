@@ -1,0 +1,35 @@
+<footer>
+  <div class="content">
+    <p>&copy; Unibox {new Date().getFullYear()}</p>
+    <p>Powered by <a href="https://astro.build">Astro</a></p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: auto;
+    padding: 0 10px;
+    background: linear-gradient(to bottom, var(--secondary), var(--primary));
+    color: white;
+    .content {
+      height: 100px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+  @media screen and (min-width: 40rem) {
+    .content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+</style>
