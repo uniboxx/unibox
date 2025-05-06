@@ -95,3 +95,17 @@ p {
 menu {
   list-style: none;
 }
+
+main {
+  flex: 1;
+  background-color: var(--secondary);
+  color: white;
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 10px;
+    @media screen and (min-width: 40rem) {
+      padding: 50px 0px 100px;
+    }
+  }
+}
