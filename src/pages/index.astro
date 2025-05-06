@@ -2,6 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 import foresta from '@assets/images/foresta-1280.jpg';
+import margherita from '@assets/images/margherita.jpg';
 import { Image } from 'astro:assets';
 ---
 
@@ -11,15 +12,18 @@ import { Image } from 'astro:assets';
   </div>
 
   <h1>The short story of Margherita</h1>
-  <p>
-    Margherita lives in a small village surrounded by a lush forest. She's a
-    strong believer in renewable energy and has installed a 10kw photovoltaic
-    plant on her roof. The plant is made up of 40 solar panels and is connected
-    to a 10kwh battery. The battery is used to store the energy produced by the
-    plant during the day, so that Margherita can use it at night or when the sun
-    isn't shining. This way, Margherita is able to reduce her carbon footprint
-    and do her part in protecting the planet.
-  </p>
+  <div class="text-and-image">
+    <p>
+      Margherita lives in a small village surrounded by a lush forest. She's a
+      strong believer in renewable energy and has installed a 10kw photovoltaic
+      plant on her roof. The plant is made up of 40 solar panels and is
+      connected to a 10kwh battery. The battery is used to store the energy
+      produced by the plant during the day, so that Margherita can use it at
+      night or when the sun isn't shining. This way, Margherita is able to
+      reduce her carbon footprint and do her part in protecting the planet.
+    </p>
+    <Image src={margherita} alt="margherita" />
+  </div>
 </BaseLayout>
 
 <style>
@@ -34,13 +38,34 @@ import { Image } from 'astro:assets';
       width: 100%;
       border-radius: 20px;
       box-shadow: 0 0 40px hsla(0, 0%, 100%, 0.8);
+      animation: fade-in 1s ease-in-out;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: rotate(-15deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0deg);
     }
   }
   h1 {
     text-align: center;
   }
-  p {
-    max-width: 70ch;
+  .text-and-image {
+    display: flex;
     margin: 0 auto;
+    gap: 30px;
+    p {
+      max-width: 70ch;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 20px;
+    }
   }
 </style>
