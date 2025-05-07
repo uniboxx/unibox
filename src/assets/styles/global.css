@@ -28,7 +28,7 @@ body {
 }
 
 html {
-  font-size: 125%; /* 20px */
+  font-size: 112.5%; /* 18px */
   @media screen and (min-width: 80rem) {
     font-size: 125%; /* 20px */
   }
