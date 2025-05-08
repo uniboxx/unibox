@@ -1,14 +1,19 @@
 {
-  "name": "unibox.free.nf",
+  "name": "unibox-me.netlify.app",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "tinacms dev -c \"astro dev\"",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.10"
+    "astro": "^5.7.10",
+    "tinacms": "^2.7.6"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.9.6",
+    "@types/node": "^22.15.16"
   }
 }
